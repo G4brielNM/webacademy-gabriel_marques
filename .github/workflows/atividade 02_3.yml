@@ -1,0 +1,20 @@
+name: Primeiro Workflow
+
+on:
+    push:
+
+env:
+  CURSO: "Integração Contínua"
+
+jobs:
+    atividade_02_3:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Exibir nome do Curso
+              run: echo "Curso - ${{ env.CURSO }}"
+            - name: Exibir usuário que executou o workflow
+              run: echo "Usuário - ${{ github.actor }}"
+            - name: Exibir nome do repositório
+              run: echo "Repositório - ${{ github.repository }}"
+            - name: Exibir a branch utilizada
+              run: echo "Branch - ${{ github.ref }}"

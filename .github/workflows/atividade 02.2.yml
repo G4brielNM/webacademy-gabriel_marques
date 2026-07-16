@@ -1,0 +1,20 @@
+name: Primeiro Workflow
+
+on:
+    push:
+
+jobs:
+
+    atividade_02_2:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Data e Hora
+              run: date
+            - name: OS 
+              run: uname -a
+            - name: Git Version
+              run: git --version
+            - name: README
+              run: cat README.md
+            - name: Lista arquivos
+              run: ls ${{ github.workspace }}
