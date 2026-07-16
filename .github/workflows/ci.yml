@@ -15,3 +15,13 @@ jobs:
               run: ls ${{ github.workspace }}
             - name: Status
               run: echo "Status ${{ job.status }}."
+            - name: Data e Hora
+              run: date
+            - name: OS 
+              run: uname -a
+            - name: Git Version
+              run: git --version
+            - name: README
+              run: cat README.md
+            - name: Lista arquivos
+              run: ls ${{ github.workspace }}
