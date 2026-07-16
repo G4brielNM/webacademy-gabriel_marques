@@ -1,0 +1,32 @@
+name: Workflow 02.4
+
+on:
+    push:
+
+jobs:
+    atividade_02_4:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v5
+            - name: Verificação do README
+              run: |
+                if [ -f README.md ]; then
+                  echo "O arquivo README.md existe."
+                else
+                  echo "O arquivo README.md não existe."
+                fi
+            - name: Verificação do LICENSE
+              run: |
+                if [ -f LICENSE ]; then
+                  echo "O arquivo LICENSE existe."
+                else
+                  echo "O arquivo LICENSE não existe."
+                fi
+            - name: Verificação do .gitignore
+              run: |
+                if [ -f .gitignore ]; then
+                  echo "O arquivo .gitignore existe."
+                else
+                  echo "O arquivo .gitignore não existe."
+                fi

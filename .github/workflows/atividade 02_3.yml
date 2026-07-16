@@ -1,4 +1,4 @@
-name: Primeiro Workflow
+name: Workflow 02.3
 
 on:
     push:
@@ -10,6 +10,8 @@ jobs:
     atividade_02_3:
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout
+              uses: actions/checkout@v5
             - name: Exibir nome do Curso
               run: echo "Curso - ${{ env.CURSO }}"
             - name: Exibir usuário que executou o workflow

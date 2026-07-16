@@ -1,4 +1,4 @@
-name: Primeiro Workflow
+name: Workflow 02.2
 
 on:
     push:
@@ -8,6 +8,8 @@ jobs:
     atividade_02_2:
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout
+              uses: actions/checkout@v5
             - name: Data e Hora
               run: date
             - name: OS 
